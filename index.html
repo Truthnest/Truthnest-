@@ -6,326 +6,261 @@
 
     <title>TruthNest — Seek Truth. Think Deeply.</title>
 
-    <meta name="description" content="TruthNest is an independent platform for books, knowledge, questions, ideas and critical thinking.">
+    <meta name="description" content="TruthNest is a place for books, knowledge, questions, ideas, evidence and independent thinking.">
 
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
             font-family: Georgia, "Times New Roman", serif;
-            background: #fafaf8;
-            color: #202124;
+            background: #f8f8f6;
+            color: #171717;
             line-height: 1.7;
         }
 
-        header {
-            background: rgba(250, 250, 248, 0.96);
-            border-bottom: 1px solid #e5e3de;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .navigation {
-            max-width: 1120px;
-            margin: auto;
-            padding: 20px 28px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: -0.6px;
-            color: #181818;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #555;
+        a {
             text-decoration: none;
-            font-size: 14px;
+            color: inherit;
         }
 
-        .nav-links a:hover {
-            color: #111;
+        /* Header */
+
+        header {
+            padding: 28px 7%;
+            border-bottom: 1px solid #deded9;
+            background: #f8f8f6;
         }
+
+        .name {
+            font-family: Arial, sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .founder {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        /* Hero */
 
         .hero {
-            max-width: 1120px;
+            max-width: 1100px;
             margin: auto;
-            padding: 125px 28px 115px;
-        }
-
-        .hero-content {
-            max-width: 780px;
+            padding: 100px 7% 110px;
         }
 
         .hero h1 {
-            font-size: clamp(48px, 8vw, 78px);
-            line-height: 1.05;
+            font-size: clamp(48px, 8vw, 88px);
+            line-height: 1.02;
             font-weight: 500;
-            letter-spacing: -3px;
-            margin-bottom: 28px;
-            color: #181818;
+            max-width: 850px;
+            letter-spacing: -2px;
         }
 
-        .hero h1 span {
-            display: block;
-        }
-
-        .hero p {
-            max-width: 650px;
+        .hero .english {
+            margin-top: 30px;
             font-size: 21px;
-            color: #666;
-            line-height: 1.65;
+            color: #555;
+            max-width: 720px;
         }
 
-        .hero-button {
+        .hero .bengali {
+            margin-top: 22px;
+            font-size: 20px;
+            color: #555;
+            max-width: 720px;
+        }
+
+        .explore-button {
             display: inline-block;
             margin-top: 38px;
-            padding: 13px 25px;
-            background: #181818;
+            padding: 15px 30px;
+            background: #171717;
             color: white;
-            text-decoration: none;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            border-radius: 3px;
+            transition: 0.2s;
         }
 
-        .hero-button:hover {
-            background: #3b3b3b;
+        .explore-button:hover {
+            background: #333;
         }
 
-        .divider {
-            max-width: 1120px;
-            margin: auto;
-            border-top: 1px solid #dedcd7;
+        /* Main */
+
+        main {
+            border-top: 1px solid #deded9;
         }
 
         .section {
-            max-width: 1120px;
+            max-width: 1100px;
             margin: auto;
-            padding: 90px 28px;
+            padding: 85px 7%;
         }
 
-        .section-heading {
-            margin-bottom: 45px;
-        }
-
-        .section-heading h2 {
-            font-size: 34px;
+        .section-title {
+            font-size: 48px;
             font-weight: 500;
-            color: #181818;
-            margin-bottom: 8px;
+            margin-bottom: 15px;
         }
 
-        .section-heading p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-            color: #777;
+        .section-intro {
+            color: #666;
+            font-size: 18px;
+            max-width: 650px;
+        }
+
+        /* About */
+
+        .about {
+            margin-top: 55px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            border: 1px solid #deded9;
+            background: #fff;
+            padding: 32px;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Featured Book */
+
+        .book-section {
+            background: #eeeeea;
         }
 
         .book {
-            border: 1px solid #dedcd7;
-            background: #fff;
-            padding: 52px;
+            max-width: 1100px;
+            margin: 50px auto 0;
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 55px;
+            grid-template-columns: 320px 1fr;
+            gap: 65px;
             align-items: center;
         }
 
         .book-cover {
-            min-height: 270px;
-            background: #202124;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 35px;
-        }
-
-        .book-cover h3 {
-            font-size: 27px;
-            font-weight: 500;
-            line-height: 1.35;
+            width: 100%;
+            display: block;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.16);
         }
 
         .book-info h3 {
-            font-size: 31px;
+            font-size: 38px;
+            line-height: 1.2;
             font-weight: 500;
-            margin-bottom: 16px;
-            color: #181818;
         }
 
-        .book-info p {
+        .book-bengali {
+            font-size: 28px;
+            margin-top: 12px;
+            color: #444;
+        }
+
+        .book-description {
+            margin-top: 25px;
             color: #666;
-            max-width: 560px;
-            margin-bottom: 25px;
-        }
-
-        .text-button {
-            display: inline-block;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-            color: #181818;
-            text-decoration: none;
-            border-bottom: 1px solid #181818;
-            padding-bottom: 3px;
-        }
-
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            border-top: 1px solid #dedcd7;
-            border-left: 1px solid #dedcd7;
-        }
-
-        .category {
-            background: #fafaf8;
-            padding: 34px 30px;
-            min-height: 155px;
-            border-right: 1px solid #dedcd7;
-            border-bottom: 1px solid #dedcd7;
-        }
-
-        .category h3 {
-            font-family: Arial, Helvetica, sans-serif;
             font-size: 17px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #222;
+            max-width: 600px;
         }
 
-        .category p {
-            font-size: 15px;
-            color: #777;
+        .read-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 27px;
+            background: #171717;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            border-radius: 3px;
         }
 
-        .about {
-            max-width: 760px;
-        }
-
-        .about p {
-            font-size: 20px;
-            color: #5f5f5f;
-            line-height: 1.8;
-        }
+        /* Footer */
 
         footer {
-            border-top: 1px solid #dedcd7;
-            padding: 45px 28px;
+            border-top: 1px solid #deded9;
+            padding: 45px 7%;
+            text-align: center;
+            color: #777;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
         }
 
-        .footer-content {
-            max-width: 1120px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-logo {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 700;
+        footer strong {
             color: #222;
         }
 
-        .footer-text {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 13px;
-            color: #777;
-        }
+        /* Mobile */
 
-        @media (max-width: 800px) {
+        @media (max-width: 700px) {
 
-            .navigation {
-                padding: 17px 20px;
-            }
-
-            .nav-links {
-                gap: 17px;
-            }
-
-            .nav-links a {
-                font-size: 12px;
+            header {
+                padding: 23px 6%;
             }
 
             .hero {
-                padding: 85px 22px 80px;
+                padding: 70px 6% 80px;
             }
 
             .hero h1 {
-                letter-spacing: -2px;
+                font-size: 52px;
+                letter-spacing: -1px;
             }
 
-            .hero p {
+            .hero .english,
+            .hero .bengali {
                 font-size: 18px;
             }
 
             .section {
-                padding: 65px 22px;
+                padding: 65px 6%;
+            }
+
+            .section-title {
+                font-size: 39px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
             }
 
             .book {
                 grid-template-columns: 1fr;
                 gap: 35px;
-                padding: 30px;
             }
 
             .book-cover {
-                min-height: 230px;
-            }
-
-            .categories {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 12px;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 500px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 49px;
-            }
-
-            .section-heading h2 {
-                font-size: 29px;
+                max-width: 300px;
+                margin: auto;
             }
 
             .book-info h3 {
-                font-size: 26px;
+                font-size: 32px;
             }
 
-            .about p {
-                font-size: 18px;
+            .book-bengali {
+                font-size: 24px;
             }
         }
     </style>
@@ -333,201 +268,149 @@
 
 <body>
 
-<header>
-    <div class="navigation">
+    <!-- Header -->
 
-        <div class="logo">
-            TruthNest
-        </div>
-
-        <nav class="nav-links">
-            <a href="#books">Books</a>
-            <a href="#knowledge">Knowledge</a>
-            <a href="#about">About</a>
-        </nav>
-
-    </div>
-</header>
+    <header>
+        <div class="name">SAJIDUL HOQUE</div>
+        <div class="founder">Founder &amp; Creator of TruthNest</div>
+    </header>
 
 
-<main>
+    <!-- Hero -->
 
     <section class="hero">
 
-        <div class="hero-content">
+        <h1>Let's seek the truth.</h1>
 
-            <h1>
-                Seek truth.
-                <span>Think deeply.</span>
-            </h1>
+        <p class="english">
+            Through this website, let's take our journey of learning,
+            questioning and understanding a little further.
+        </p>
 
-            <p>
-                Explore books, knowledge, questions and ideas.
-                Examine evidence. Think independently.
+        <p class="bengali">
+            চল সত্য খুঁজি। এই ওয়েবসাইটের মাধ্যমে জ্ঞান, প্রশ্ন ও চিন্তার
+            জগতে আমাদের শেখার পথকে আরও একটু এগিয়ে নিয়ে যাই।
+        </p>
+
+        <a href="#explore" class="explore-button">Explore</a>
+
+    </section>
+
+
+    <main id="explore">
+
+        <!-- TruthNest -->
+
+        <section class="section">
+
+            <h2 class="section-title">TruthNest</h2>
+
+            <p class="section-intro">
+                A place for books, knowledge, questions and ideas —
+                where curiosity leads to deeper understanding.
             </p>
 
-            <a class="hero-button" href="#books">
-                Explore
-            </a>
+            <div class="about">
 
-        </div>
+                <div class="card">
+                    <h3>Books</h3>
+                    <p>
+                        Explore books and original writings about questions,
+                        ideas, knowledge and the search for truth.
+                    </p>
+                </div>
 
-    </section>
+                <div class="card">
+                    <h3>Knowledge</h3>
+                    <p>
+                        Learn about different subjects and discover ideas
+                        that encourage thoughtful understanding.
+                    </p>
+                </div>
 
+                <div class="card">
+                    <h3>Questions &amp; Ideas</h3>
+                    <p>
+                        Ask difficult questions, examine different
+                        perspectives and think beyond easy answers.
+                    </p>
+                </div>
 
-    <div class="divider"></div>
-
-
-    <section class="section" id="books">
-
-        <div class="section-heading">
-            <h2>Featured</h2>
-            <p>A selection of books and original writings.</p>
-        </div>
-
-
-        <article class="book">
-
-            <div class="book-cover">
-                <h3>
-                    The Truth You Keep Avoiding
-                </h3>
-            </div>
-
-
-            <div class="book-info">
-
-                <h3>
-                    The Truth You Keep Avoiding
-                </h3>
-
-                <p>
-                    A journey through questions, ideas,
-                    knowledge and the search for truth.
-                </p>
-
-                <a class="text-button" href="#">
-                    Read the book
-                </a>
+                <div class="card">
+                    <h3>Critical Thinking</h3>
+                    <p>
+                        Question what you hear, examine the evidence and
+                        develop the habit of thinking independently.
+                    </p>
+                </div>
 
             </div>
 
-        </article>
-
-    </section>
+        </section>
 
 
-    <div class="divider"></div>
+        <!-- Featured Book -->
 
+        <section class="section book-section">
 
-    <section class="section" id="knowledge">
+            <h2 class="section-title">Featured Book</h2>
 
-        <div class="section-heading">
-
-            <h2>Explore</h2>
-
-            <p>
-                Different subjects. Different questions.
-                One place to think.
+            <p class="section-intro">
+                A book about questions, ideas and the search for truth.
             </p>
 
-        </div>
+            <div class="book">
 
+                <!--
+                    IMPORTANT:
+                    Upload your book cover to the repository
+                    and name it: book-cover.jpg
+                -->
 
-        <div class="categories">
+                <div>
+                    <img
+                        src="book-cover.jpg"
+                        alt="The Truth You Are Avoiding — book cover"
+                        class="book-cover"
+                    >
+                </div>
 
-            <div class="category">
-                <h3>Books</h3>
-                <p>
-                    Original books, writings and long-form reading.
-                </p>
+                <div class="book-info">
+
+                    <h3>
+                        The Truth You Are Avoiding
+                    </h3>
+
+                    <div class="book-bengali">
+                        যে সত্য তুমি এড়িয়ে যাচ্ছো
+                    </div>
+
+                    <p class="book-description">
+                        A thoughtful journey through questions, ideas,
+                        and the search for truth — written for those who
+                        are willing to question, learn and think deeply.
+                    </p>
+
+                    <a href="#" class="read-button">
+                        Read the Book
+                    </a>
+
+                </div>
+
             </div>
 
+        </section>
 
-            <div class="category">
-                <h3>Knowledge</h3>
-                <p>
-                    Explore ideas and information from different fields.
-                </p>
-            </div>
+    </main>
 
 
-            <div class="category">
-                <h3>Questions & Answers</h3>
-                <p>
-                    Difficult questions examined carefully and logically.
-                </p>
-            </div>
+    <!-- Footer -->
 
-
-            <div class="category">
-                <h3>Science</h3>
-                <p>
-                    Explore scientific ideas, evidence and discoveries.
-                </p>
-            </div>
-
-
-            <div class="category">
-                <h3>Critical Thinking</h3>
-                <p>
-                    Question assumptions and develop independent thinking.
-                </p>
-            </div>
-
-
-            <div class="category">
-                <h3>History</h3>
-                <p>
-                    Explore people, civilizations and events that shaped our world.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <div class="divider"></div>
-
-
-    <section class="section" id="about">
-
-        <div class="section-heading">
-            <h2>About TruthNest</h2>
-        </div>
-
-        <div class="about">
-
-            <p>
-                TruthNest is an independent platform for exploring
-                books, knowledge, questions and ideas. Its purpose
-                is simple: encourage people to learn, examine
-                evidence, question assumptions and think for themselves.
-            </p>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer>
-
-    <div class="footer-content">
-
-        <div class="footer-logo">
-            TruthNest
-        </div>
-
-        <div class="footer-text">
-            Seek truth. Think deeply. © 2026
-        </div>
-
-    </div>
-
-</footer>
+    <footer>
+        <strong>TruthNest</strong><br>
+        Seek truth. Think deeply.<br><br>
+        © 2026 TruthNest. Created by Sajidul Hoque.
+    </footer>
 
 </body>
 </html>
