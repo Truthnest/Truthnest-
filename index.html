@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TruthNest — Seek Truth. Think Deeply.</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f5;
+            color: #202020;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 25px;
+            background: #111827;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .book-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            max-width: 650px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .book-card h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .book-card p {
+            color: #666;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .category {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+        }
+
+        .category h3 {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">TruthNest</div>
+
+        <div>
+            <a href="#books">Books</a>
+            <a href="#knowledge">Knowledge</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>TruthNest</h1>
+
+    <p>
+        Seek truth. Think deeply. Explore knowledge,
+        questions, ideas and evidence.
+    </p>
+
+    <a class="button" href="#books">Explore Books</a>
+</section>
+
+<section class="section" id="books">
+    <h2>Featured Book</h2>
+
+    <div class="book-card">
+        <h3>The Truth You Keep Avoiding</h3>
+
+        <p>
+            A journey through questions, ideas,
+            knowledge and the search for truth.
+        </p>
+
+        <a class="button" href="#">
+            Read the Book
+        </a>
+    </div>
+</section>
+
+<section class="section" id="knowledge">
+    <h2>Explore Knowledge</h2>
+
+    <div class="categories">
+
+        <div class="category">
+            <h3>📚 Books</h3>
+            <p>Explore books and writings.</p>
+        </div>
+
+        <div class="category">
+            <h3>🕌 Islamic Knowledge</h3>
+            <p>Learn about Islamic ideas and knowledge.</p>
+        </div>
+
+        <div class="category">
+            <h3>❓ Questions & Answers</h3>
+            <p>Explore difficult questions and thoughtful answers.</p>
+        </div>
+
+        <div class="category">
+            <h3>🔬 Science & Islam</h3>
+            <p>Explore questions about science and faith.</p>
+        </div>
+
+        <div class="category">
+            <h3>🧠 Critical Thinking</h3>
+            <p>Question, investigate and think deeply.</p>
+        </div>
+
+        <div class="category">
+            <h3>🌍 History</h3>
+            <p>Explore history and civilization.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>About TruthNest</h2>
+
+    <div class="book-card">
+        <p>
+            TruthNest is a platform created to explore
+            knowledge, books, questions and ideas through
+            learning, evidence and critical thinking.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 TruthNest. All rights reserved.</p>
+    <p>Seek Truth. Think Deeply.</p>
+</footer>
+
+</body>
+</html>
