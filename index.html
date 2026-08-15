@@ -4,214 +4,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TruthNest — Seek Truth. Think Deeply.</title>
+    <title>VERITEXA | Seek Truth. Think Deeply.</title>
 
-    <meta name="description" content="TruthNest is a place for books, knowledge, questions, ideas, evidence and independent thinking.">
+    <meta name="description" content="VERITEXA is a place for books, knowledge, questions, critical thinking, history and ideas. Explore, question and learn.">
+
+    <meta name="keywords" content="VERITEXA, books, knowledge, questions, critical thinking, history, ideas, truth, learning">
+
+    <meta name="author" content="SAJIDUL HOQUE">
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
+            background: #fafaf8;
+            color: #181818;
             font-family: Georgia, "Times New Roman", serif;
-            background: #f8f8f6;
-            color: #171717;
             line-height: 1.7;
         }
 
         a {
-            text-decoration: none;
             color: inherit;
+            text-decoration: none;
         }
-
-        /* Header */
 
         header {
-            padding: 28px 7%;
-            border-bottom: 1px solid #deded9;
-            background: #f8f8f6;
+            padding: 30px 7%;
+            border-bottom: 1px solid #deded8;
         }
 
-        .name {
-            font-family: Arial, sans-serif;
+        .author-name {
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 22px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
         }
 
-        .founder {
-            font-family: Arial, sans-serif;
+        .author-title {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #686868;
             font-size: 13px;
-            color: #666;
             margin-top: 3px;
         }
 
-        /* Hero */
-
         .hero {
-            max-width: 1100px;
+            max-width: 1120px;
             margin: auto;
-            padding: 100px 7% 110px;
+            padding: 100px 7% 105px;
         }
 
         .hero h1 {
             font-size: clamp(48px, 8vw, 88px);
             line-height: 1.02;
             font-weight: 500;
-            max-width: 850px;
             letter-spacing: -2px;
+            max-width: 850px;
         }
 
-        .hero .english {
-            margin-top: 30px;
-            font-size: 21px;
-            color: #555;
+        .hero-text {
             max-width: 720px;
+            margin-top: 32px;
+            color: #5e5e5e;
+            font-size: 19px;
         }
 
-        .hero .bengali {
+        .hero-bengali {
+            max-width: 720px;
             margin-top: 22px;
-            font-size: 20px;
-            color: #555;
-            max-width: 720px;
+            color: #5e5e5e;
+            font-size: 19px;
         }
 
         .explore-button {
             display: inline-block;
-            margin-top: 38px;
-            padding: 15px 30px;
-            background: #171717;
-            color: white;
-            font-family: Arial, sans-serif;
-            font-size: 15px;
+            margin-top: 35px;
+            padding: 14px 28px;
+            background: #181818;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
             border-radius: 3px;
-            transition: 0.2s;
         }
 
         .explore-button:hover {
-            background: #333;
-        }
-
-        /* Main */
-
-        main {
-            border-top: 1px solid #deded9;
+            background: #333333;
         }
 
         .section {
-            max-width: 1100px;
-            margin: auto;
+            border-top: 1px solid #deded8;
             padding: 85px 7%;
         }
 
+        .section-inner {
+            max-width: 1120px;
+            margin: auto;
+        }
+
         .section-title {
-            font-size: 48px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .section-intro {
-            color: #666;
-            font-size: 18px;
-            max-width: 650px;
-        }
-
-        /* About */
-
-        .about {
-            margin-top: 55px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .card {
-            border: 1px solid #deded9;
-            background: #fff;
-            padding: 32px;
-        }
-
-        .card h3 {
-            font-size: 23px;
+            font-size: 46px;
             font-weight: 500;
             margin-bottom: 12px;
         }
 
-        .card p {
-            color: #666;
-            font-size: 16px;
+        .section-description {
+            max-width: 700px;
+            color: #666666;
+            font-size: 18px;
         }
 
-        /* Featured Book */
+        .cards {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            display: block;
+            background: #ffffff;
+            border: 1px solid #deded8;
+            padding: 32px;
+            min-height: 190px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #999999;
+        }
+
+        .card h3 {
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .card .bengali-title {
+            font-size: 18px;
+            color: #555555;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #696969;
+            font-size: 16px;
+        }
 
         .book-section {
             background: #eeeeea;
         }
 
         .book {
-            max-width: 1100px;
-            margin: 50px auto 0;
+            margin-top: 50px;
             display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 65px;
+            grid-template-columns: 300px 1fr;
+            gap: 60px;
             align-items: center;
         }
 
         .book-cover {
             width: 100%;
             display: block;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.16);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
         }
 
-        .book-info h3 {
+        .book-title {
             font-size: 38px;
-            line-height: 1.2;
             font-weight: 500;
+            line-height: 1.25;
         }
 
-        .book-bengali {
-            font-size: 28px;
-            margin-top: 12px;
-            color: #444;
+        .book-bengali-title {
+            font-size: 27px;
+            color: #4d4d4d;
+            margin-top: 10px;
         }
 
         .book-description {
-            margin-top: 25px;
-            color: #666;
+            max-width: 650px;
+            color: #666666;
             font-size: 17px;
-            max-width: 600px;
+            margin-top: 23px;
         }
 
         .read-button {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 28px;
             padding: 14px 27px;
-            background: #171717;
-            color: white;
-            font-family: Arial, sans-serif;
+            background: #181818;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
             border-radius: 3px;
         }
 
-        /* Footer */
+        .future-section {
+            background: #fafaf8;
+        }
+
+        .future-box {
+            margin-top: 45px;
+            border: 1px solid #deded8;
+            background: #ffffff;
+            padding: 38px;
+            max-width: 800px;
+        }
+
+        .future-box h3 {
+            font-size: 27px;
+            font-weight: 500;
+        }
+
+        .future-box p {
+            margin-top: 12px;
+            color: #666666;
+        }
 
         footer {
-            border-top: 1px solid #deded9;
+            border-top: 1px solid #deded8;
             padding: 45px 7%;
             text-align: center;
-            color: #777;
-            font-family: Arial, sans-serif;
+            color: #777777;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 13px;
         }
 
         footer strong {
-            color: #222;
+            color: #222222;
         }
-
-        /* Mobile */
 
         @media (max-width: 700px) {
 
@@ -228,9 +255,9 @@
                 letter-spacing: -1px;
             }
 
-            .hero .english,
-            .hero .bengali {
-                font-size: 18px;
+            .hero-text,
+            .hero-bengali {
+                font-size: 17px;
             }
 
             .section {
@@ -241,7 +268,7 @@
                 font-size: 39px;
             }
 
-            .about {
+            .cards {
                 grid-template-columns: 1fr;
             }
 
@@ -255,12 +282,12 @@
                 margin: auto;
             }
 
-            .book-info h3 {
-                font-size: 32px;
+            .book-title {
+                font-size: 31px;
             }
 
-            .book-bengali {
-                font-size: 24px;
+            .book-bengali-title {
+                font-size: 23px;
             }
         }
     </style>
@@ -268,26 +295,22 @@
 
 <body>
 
-    <!-- Header -->
-
     <header>
-        <div class="name">SAJIDUL HOQUE</div>
-        <div class="founder">Founder &amp; Creator of TruthNest</div>
+        <div class="author-name">SAJIDUL HOQUE</div>
+        <div class="author-title">Founder &amp; Creator of VERITEXA</div>
     </header>
 
-
-    <!-- Hero -->
 
     <section class="hero">
 
         <h1>Let's seek the truth.</h1>
 
-        <p class="english">
+        <p class="hero-text">
             Through this website, let's take our journey of learning,
             questioning and understanding a little further.
         </p>
 
-        <p class="bengali">
+        <p class="hero-bengali">
             চল সত্য খুঁজি। এই ওয়েবসাইটের মাধ্যমে জ্ঞান, প্রশ্ন ও চিন্তার
             জগতে আমাদের শেখার পথকে আরও একটু এগিয়ে নিয়ে যাই।
         </p>
@@ -297,98 +320,124 @@
     </section>
 
 
-    <main id="explore">
+    <section class="section" id="explore">
 
-        <!-- TruthNest -->
+        <div class="section-inner">
 
-        <section class="section">
+            <h2 class="section-title">VERITEXA</h2>
 
-            <h2 class="section-title">TruthNest</h2>
-
-            <p class="section-intro">
-                A place for books, knowledge, questions and ideas —
-                where curiosity leads to deeper understanding.
+            <p class="section-description">
+                A place to explore books, knowledge, questions, ideas and
+                different subjects through learning and independent thinking.
             </p>
 
-            <div class="about">
 
-                <div class="card">
+            <div class="cards">
+
+                <a href="#books" class="card">
                     <h3>Books</h3>
+                    <div class="bengali-title">বই</div>
                     <p>
-                        Explore books and original writings about questions,
-                        ideas, knowledge and the search for truth.
+                        Explore books and writings created to encourage
+                        learning, reflection and deeper understanding.
                     </p>
-                </div>
+                </a>
 
-                <div class="card">
+
+                <a href="#knowledge" class="card">
                     <h3>Knowledge</h3>
+                    <div class="bengali-title">জ্ঞান</div>
                     <p>
-                        Learn about different subjects and discover ideas
-                        that encourage thoughtful understanding.
+                        Explore knowledge from different subjects and learn
+                        about ideas that shape our understanding of the world.
                     </p>
-                </div>
+                </a>
 
-                <div class="card">
-                    <h3>Questions &amp; Ideas</h3>
+
+                <a href="#questions" class="card">
+                    <h3>Questions &amp; Answers</h3>
+                    <div class="bengali-title">প্রশ্ন ও উত্তর</div>
                     <p>
-                        Ask difficult questions, examine different
-                        perspectives and think beyond easy answers.
+                        Explore difficult questions and thoughtful answers.
+                        Ask, investigate and look at different perspectives.
                     </p>
-                </div>
+                </a>
 
-                <div class="card">
+
+                <a href="#critical-thinking" class="card">
                     <h3>Critical Thinking</h3>
+                    <div class="bengali-title">
+                        The questions that are not easy to answer
+                    </div>
                     <p>
-                        Question what you hear, examine the evidence and
-                        develop the habit of thinking independently.
+                        সহজে যেসব প্রশ্নের উত্তর দেওয়া যায় না, সেসব প্রশ্নকে
+                        যুক্তি, evidence এবং চিন্তার মাধ্যমে বোঝার চেষ্টা করুন।
                     </p>
-                </div>
+                </a>
+
+
+                <a href="#history" class="card">
+                    <h3>History</h3>
+                    <div class="bengali-title">ইতিহাস</div>
+                    <p>
+                        Explore historical events, civilizations, people and
+                        ideas that have shaped our world.
+                    </p>
+                </a>
+
+
+                <a href="#future-books" class="card">
+                    <h3>New Books</h3>
+                    <div class="bengali-title">নতুন বই</div>
+                    <p>
+                        Future books and new writings will be added here as
+                        they become available.
+                    </p>
+                </a>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- Featured Book -->
+    <section class="section book-section" id="books">
 
-        <section class="section book-section">
+        <div class="section-inner">
 
             <h2 class="section-title">Featured Book</h2>
 
-            <p class="section-intro">
-                A book about questions, ideas and the search for truth.
+            <p class="section-description">
+                A thoughtful journey through questions, ideas and the search
+                for truth.
             </p>
+
 
             <div class="book">
 
-                <!--
-                    IMPORTANT:
-                    Upload your book cover to the repository
-                    and name it: book-cover.jpg
-                -->
-
                 <div>
                     <img
-                        src="book-cover.jpg"
-                        alt="The Truth You Are Avoiding — book cover"
+                        src="book-cover-front.png"
+                        alt="The Truth You Are Avoiding book cover"
                         class="book-cover"
                     >
                 </div>
 
-                <div class="book-info">
 
-                    <h3>
+                <div>
+
+                    <h3 class="book-title">
                         The Truth You Are Avoiding
                     </h3>
 
-                    <div class="book-bengali">
+                    <div class="book-bengali-title">
                         যে সত্য তুমি এড়িয়ে যাচ্ছো
                     </div>
 
                     <p class="book-description">
-                        A thoughtful journey through questions, ideas,
-                        and the search for truth — written for those who
-                        are willing to question, learn and think deeply.
+                        A journey through questions, ideas, knowledge and
+                        the search for truth.
                     </p>
 
                     <a href="#" class="read-button">
@@ -399,17 +448,106 @@
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
-    <!-- Footer -->
+    <section class="section" id="knowledge">
+
+        <div class="section-inner">
+
+            <h2 class="section-title">Knowledge</h2>
+
+            <p class="section-description">
+                Knowledge from different subjects will be added here over time.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section" id="questions">
+
+        <div class="section-inner">
+
+            <h2 class="section-title">Questions &amp; Answers</h2>
+
+            <p class="section-description">
+                Explore questions and answers about subjects that deserve
+                careful thought and honest investigation.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section" id="critical-thinking">
+
+        <div class="section-inner">
+
+            <h2 class="section-title">Critical Thinking</h2>
+
+            <p class="section-description">
+                The questions that are not easy to answer.
+            </p>
+
+            <p class="section-description" style="margin-top: 10px;">
+                যেসব প্রশ্নের উত্তর সহজে দেওয়া যায় না, সেসব প্রশ্নকে
+                যুক্তি, evidence এবং স্বাধীন চিন্তার মাধ্যমে পরীক্ষা করা।
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section" id="history">
+
+        <div class="section-inner">
+
+            <h2 class="section-title">History</h2>
+
+            <p class="section-description">
+                Explore history, civilizations, events and the ideas that
+                influenced the world.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section future-section" id="future-books">
+
+        <div class="section-inner">
+
+            <h2 class="section-title">New Books</h2>
+
+            <div class="future-box">
+
+                <h3>Future books and writings</h3>
+
+                <p>
+                    This section is reserved for future books and writings.
+                    New work can be added here as it is published.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
     <footer>
-        <strong>TruthNest</strong><br>
+
+        <strong>VERITEXA</strong><br>
         Seek truth. Think deeply.<br><br>
-        © 2026 TruthNest. Created by Sajidul Hoque.
+        Created by SAJIDUL HOQUE.
+
     </footer>
 
 </body>
